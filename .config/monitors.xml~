@@ -1,0 +1,31 @@
+<monitors version="2">
+  <configuration>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>HDMI-1</connector>
+          <vendor>PRI</vendor>
+          <product>BBY LCD TV</product>
+          <serial>0x00000001</serial>
+        </monitorspec>
+        <mode>
+          <width>1360</width>
+          <height>768</height>
+          <rate>60.015163421630859</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+    <disabled>
+      <monitorspec>
+        <connector>eDP-1</connector>
+        <vendor>CMN</vendor>
+        <product>0x1490</product>
+        <serial>0x00000000</serial>
+      </monitorspec>
+    </disabled>
+  </configuration>
+</monitors>

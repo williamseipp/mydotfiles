@@ -1,0 +1,53 @@
+file:///home/will/projects/react-flask-app/src/App.js {"mtime":1594075289991,"ctime":1593643457341,"size":1315,"etag":"35bqeh7os1bd","orphaned":false}
+import React, { useState, useEffect } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+var myName = "William";
+
+function App() {
+  const [currentTime, setCurrentTime]= useState(0);
+
+
+  // the constant currentTime is set each time the ENTIRE
+  // page is rendered
+  //
+  // useEffect is a callback with 2 arguements, the 2nd
+  // is the empty list [] which prevents the function from
+  // being called whenever the state changes
+
+  useEffect(() => {
+
+    // here is the api call "fetch"
+    // the .then is based on "promises"
+    // this response gets converted to json
+    // "data" is a javascript object
+    fetch('/time').then(res => res.json()).then(data => {
+      // here is the actual LOGIC
+      // setCurrentTime is a fucntion
+      setCurrentTime(data.time)
+    });
+  }, []);
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        <p>The current time is {currentTime}.</p>
+      </header>
+    </div>
+  );
+}
+
+export default App;

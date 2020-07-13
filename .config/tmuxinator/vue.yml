@@ -1,0 +1,7 @@
+name: learnVue
+root: ~/projects/vue-weather
+
+windows:
+  - vim: vim
+  - video: vlc ~/Videos/vue/weatherAppTutorial.mp4
+
